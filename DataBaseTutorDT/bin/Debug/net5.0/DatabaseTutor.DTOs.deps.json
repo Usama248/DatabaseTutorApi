@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DatabaseTutor.DTOs/1.0.0": {
+        "runtime": {
+          "DatabaseTutor.DTOs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DatabaseTutor.DTOs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
