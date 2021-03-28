@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SonetCrm.API
+/CommonLayer/bin/Debug/net5.0
+/CommonLayer/obj
+/SonetCrm.API/bin/Debug/net5.0
+/SonetCrm.API/obj
+/SonetCrm.Buisness/bin/Debug/net5.0
+/SonetCrm.Buisness/obj
+/SonetCrm.Data/bin/Debug/net5.0
+/SonetCrm.Data/obj
+/SonetCrm.DTOS/bin/Debug/net5.0
+/SonetCrm.DTOS/obj
+/SonetCrm.ENUM/bin/Debug
+/SonetCrm.ENUM/obj
