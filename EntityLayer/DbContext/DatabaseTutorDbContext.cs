@@ -19,6 +19,7 @@ namespace EntityLayer.DbContext
         public DbSet<Class> Class { get; set; }
         public DbSet<StudentClass> StudentClass { get; set; }
         public DbSet<TeacherClass> TeacherClass { get; set; }
+        public DbSet<StudentQuery> StudentQuery { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(ConnectionStrings.DatabaseTutorConnectionString);

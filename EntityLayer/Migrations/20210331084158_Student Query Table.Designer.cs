@@ -4,14 +4,16 @@ using EntityLayer.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityLayer.Migrations
 {
     [DbContext(typeof(DatabaseTutorDbContext))]
-    partial class DatabaseTutorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210331084158_Student Query Table")]
+    partial class StudentQueryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -245,53 +247,6 @@ namespace EntityLayer.Migrations
                     b.ToTable("Database_Tutor_StudentClass");
                 });
 
-            modelBuilder.Entity("EntityLayer.DbContext.Entities.StudentQuery", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("dtsq_key")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Database")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("dtsq_database");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Query")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("dtsq_query");
-
-                    b.Property<string>("QueryName")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("dtsq_query_name");
-
-                    b.Property<string>("StudentId")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("dtsq_student_id");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("Database_Tutor_Student_Query");
-                });
-
             modelBuilder.Entity("EntityLayer.DbContext.Entities.TeacherClass", b =>
                 {
                     b.Property<int>("Id")
@@ -491,15 +446,6 @@ namespace EntityLayer.Migrations
                     b.Navigation("Classes");
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("EntityLayer.DbContext.Entities.StudentQuery", b =>
-                {
-                    b.HasOne("EntityLayer.DbContext.DatabaseTutorUser", "User")
-                        .WithMany()
-                        .HasForeignKey("StudentId");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("EntityLayer.DbContext.Entities.TeacherClass", b =>

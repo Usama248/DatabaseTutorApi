@@ -20,6 +20,8 @@ namespace SonetCrm.Buisness.UnitOfWorks.Portal
         public IUserRepo UserRepository => _serviceProvider.GetRequiredService<IUserRepo>();
         public IClassRepo ClassRepo => _serviceProvider.GetRequiredService<IClassRepo>();
         public IAssignmentRepo AssignmentRepo => _serviceProvider.GetRequiredService<IAssignmentRepo>();
+        public IQueryRepo QueryRepo => _serviceProvider.GetRequiredService<IQueryRepo>();
+        public IQueryBuilderRepo QueryBuilderRepo => _serviceProvider.GetRequiredService<IQueryBuilderRepo>();
 
         public async Task<bool> Save()
         {

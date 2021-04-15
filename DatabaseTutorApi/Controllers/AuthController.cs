@@ -1,5 +1,6 @@
 ﻿using DatabaseTutor.DTOs;
 using DatabaseTutor.DTOs.RequestDtos.User;
+using DatabaseTutor.DTOs.RequestDTOs.StudentQuery;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

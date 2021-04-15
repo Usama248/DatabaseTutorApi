@@ -34,7 +34,9 @@ namespace DatabaseTutorApi.Buisness.DIHelper
             #region DataBaseTutor Database Services
             services.AddScoped<IUserRepo, UserRepo>();
             services.AddScoped<IAssignmentRepo, AssignmentRepo>();
+            services.AddScoped<IQueryRepo, QueryRepo>();
             services.AddScoped<IClassRepo,  ClassRepo>();
+            services.AddScoped<IQueryBuilderRepo, QueryBuilderRepo>();
             #endregion
 
 

@@ -11,6 +11,8 @@ namespace UnitOfWork.UnitOfWork
         IUserRepo UserRepository { get; }
         IClassRepo ClassRepo { get; }
         IAssignmentRepo AssignmentRepo { get; }
+        IQueryRepo QueryRepo { get; }
+        IQueryBuilderRepo QueryBuilderRepo { get; }
         Task<bool> Save();
     }
 }

@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using DatabaseTutor.DTOs.RequestDTOs.Assignment;
+using DatabaseTutor.DTOs.RequestDTOs.StudentQuery;
 using DatabaseTutor.DTOs.ResponseDTOs.Assignment;
 using DatabaseTutor.DTOs.ResponseDTOs.Class;
+using DatabaseTutor.DTOs.ResponseDTOs.StudentQuery;
 using DatabaseTutor.DTOs.ResponseDTOs.User;
 using EntityLayer.DbContext;
 using EntityLayer.DbContext.Entities;
@@ -31,6 +33,12 @@ namespace CommonLayer.Helper
             CreateMap<AddEditClassResponseDTO, Class>();
             CreateMap<Class, AddEditAssignmentResponseDTO>();
             CreateMap<AddEditClassRequestDTO, Class>();
+
+            //Add Edit Class --> DatabaseTutor Class
+            CreateMap<AddEditStudentQueryResponseDTO, StudentQuery>();
+            CreateMap<StudentQuery, AddEditAssignmentResponseDTO>();
+            CreateMap<AddEditStudentQueryRequestDTO, StudentQuery>();
+            
         }
     }
 }

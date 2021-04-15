@@ -4,14 +4,16 @@ using EntityLayer.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityLayer.Migrations
 {
     [DbContext(typeof(DatabaseTutorDbContext))]
-    partial class DatabaseTutorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210331202846_student query")]
+    partial class studentquery
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -258,10 +260,6 @@ namespace EntityLayer.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Database")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("dtsq_database");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
